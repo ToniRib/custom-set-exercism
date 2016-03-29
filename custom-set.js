@@ -5,11 +5,11 @@ function CustomSet(numberArray) {
 CustomSet.prototype.eql = function(otherSet) {
   if (lengthsAreNotEqual(this.data, otherSet.data)) return false;
 
-  newArray = this.data.filter(function(element) {
+  uniqueElements = this.data.filter(function(element) {
     return otherSet.data.indexOf(element) === -1;
   });
 
-  return arrayIsEmpty(newArray);
+  return arrayIsEmpty(uniqueElements);
 };
 
 var lengthsAreNotEqual = function(array1, array2) {
