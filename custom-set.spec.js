@@ -35,4 +35,11 @@ describe('CustomSet', function() {
 
     expect(subject.eql(nonDuplicateSubject)).toBe(false);
   });
+
+  it('can compare equality of totally different values', function(){
+    var subject = new CustomSet([3, 2, 1]);
+    var nonDuplicateSubject = new CustomSet([4, 5, 6]);
+
+    expect(subject.eql(nonDuplicateSubject)).toBe(false);
+  });
 });
